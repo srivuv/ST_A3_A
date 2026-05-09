@@ -1,5 +1,6 @@
 # PROJECT-SPECIFIC gitignore
 Assets/
+data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

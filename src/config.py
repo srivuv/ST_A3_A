@@ -1,5 +1,4 @@
-"""
-This configuration module helps store paths and reusable settings in one
+"""This configuration module helps store paths and reusable settings in one
 easy-to-access place; improving readability, avoiding hard-coded values and
 allowing project-wide changes seamlessly and efficiently.
 """
@@ -14,4 +13,4 @@ EDA_OUTPUT_DIR = OUTPUTS_DIR / "eda"
 MODEL_OUTPUT_DIR = OUTPUTS_DIR / "models"
 
 IMAGE_SIZE = (128, 128)
-SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp"}
+SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".bmp", ".webp"}
