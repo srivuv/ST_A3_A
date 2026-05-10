@@ -12,15 +12,13 @@ class MacroApp(tk.Tk):
         self.geometry("900x700")
         
         self.preprocessor = preprocessor
-        
+        self.model = joblib.load(model_path)
+        self.selected_file = None
 
         if not model_path.exists():
             messagebox.showerror("Error", f"Cannot find file model at: {model_path}")
             self.destroy()
             return
-            
-        self.model = joblib.load(model_path)
-        self.selected_file = None
 
 
         self.title_label = tk.Label(self, text="Image analysis system", font=("Arial", 18, "bold"))
@@ -61,7 +59,7 @@ class MacroApp(tk.Tk):
     def predict_image(self) -> None:
     
         if not self.selected_file:
-            messagebox.showwarning(""Announcement", "Please choose an image first!"")
+            messagebox.showwarning("Announcement", "Please choose an image first!")
             return
 
         try:
@@ -82,4 +80,4 @@ class MacroApp(tk.Tk):
 
         except Exception as e:
 
-            messagebox.showerror("Prediction error", f"An error occurred while processing the image":\n{str(e)}")
+            messagebox.showerror("Prediction error", f"An error occurred while processing the image:\n{str(e)}")

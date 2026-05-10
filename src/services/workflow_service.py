@@ -12,8 +12,7 @@ class WorkflowService:
             MODEL_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
             self.indexer = DatasetIndexer()
             self.preprocessor = ImagePreprocessor()
-            self.classifier = ClassifierService(self.preprocessor,
-      MODEL_OUTPUT_DIR)
+            self.classifier = ClassifierService(self.preprocessor, MODEL_OUTPUT_DIR)
             self.dataframe: pd.DataFrame | None = None
       def load_dataframe(self) -> pd.DataFrame:
 #Load and cache the indexed dataset."""
