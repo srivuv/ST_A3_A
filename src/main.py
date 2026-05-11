@@ -7,6 +7,7 @@ def main() -> None:
     """
 
     workflow = WorkflowService()
+    workflow.run_full_pipeline()
     app = MacroApp(workflow.preprocessor, MODEL_OUTPUT_DIR/"macro_classifier.joblib")
     app.mainloop()
 

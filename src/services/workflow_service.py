@@ -1,7 +1,11 @@
 from pathlib import Path
+
 import joblib
 import pandas as pd
-from src.config import MODEL_OUTPUT_DIR
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+from src.config import MODEL_OUTPUT_DIR, REPORTS_OUTPUT_DIR
 from src.services.classifier_service import ClassifierService
 from src.services.dataset_indexer import DatasetIndexer
 from src.services.image_preprocessor import ImagePreprocessor
@@ -40,6 +44,7 @@ class WorkflowService:
 
       def run_full_pipeline(self) -> None:
 #Run the default Stage 1 and Stage 2 workflow."""
+            print("Running Full Workflow Pipeline")
             results = self.train_model()
             print(f"Training accuracy: {results['accuracy']:.4f}")
             print(results["report"])

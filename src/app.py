@@ -37,6 +37,9 @@ class MacroApp(tk.Tk):
         tk.Button(button_frame, text="Choose image", command=self.choose_image, width=15).pack(side=tk.LEFT, padx=10)
         tk.Button(button_frame, text="Guess", command=self.predict_image, width=15, bg="lightgreen").pack(side=tk.LEFT, padx=10)
 
+        self.image = None
+        self.photo = None
+
     def choose_image(self) -> None:
 
         file_path = filedialog.askopenfilename(
@@ -47,14 +50,14 @@ class MacroApp(tk.Tk):
 
         self.selected_file = file_path
         try:
-            image = Image.open(file_path)
-            image.thumbnail((400, 400)) 
-            photo = ImageTk.PhotoImage(image)
+            self.image = Image.open(file_path)
+            self.image.thumbnail((400, 400)) 
+            self.photo = ImageTk.PhotoImage(self.image)
             
-            self.image_label.configure(image=photo, text="")
-            self.image_label.image = photo
+            self.image_label.configure(image=self.photo, text="")
+            self.image_label.image = self.photo
         except Exception as e:
-            messagebox.showerror("Lỗi", f"Cannot show image: {e}")
+            messagebox.showerror("Error", f"Cannot show image: {e}")
 
     def predict_image(self) -> None:
     

@@ -3,6 +3,8 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+from src.config import REPORTS_OUTPUT_DIR
+
 def save_training_report(results: dict[str, object], output_dir: Path) -> None:
     """Write the classification report to a text file.
     """
