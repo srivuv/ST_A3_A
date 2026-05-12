@@ -5,10 +5,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from src.config import MODEL_OUTPUT_DIR, REPORTS_OUTPUT_DIR
-from src.services.classifier_service import ClassifierService
-from src.services.dataset_indexer import DatasetIndexer
-from src.services.image_preprocessor import ImagePreprocessor
+from config import MODEL_OUTPUT_DIR, REPORTS_OUTPUT_DIR
+from services.classifier_service import ClassifierService
+from services.dataset_indexer import DatasetIndexer
+from services.image_preprocessor import ImagePreprocessor
 
 class WorkflowService:
 #Coordinate the shared workflow used by batch, GUI, and console entry points.
