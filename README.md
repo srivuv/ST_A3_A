@@ -19,15 +19,15 @@ This application is designed to analyze macroinvertebrate image data, generate E
   
 🛠 Python Packages UsedThe system utilizes several specialized libraries for data science and computer vision :
 
-Pandas: Used to store indexed image records and support tabular analysis.
+-Pandas: Used to store indexed image records and support tabular analysis.
 
-OpenCV: Handles image reading, resizing, and grayscale preprocessing.
+-OpenCV: Handles image reading, resizing, and grayscale preprocessing.
 
-Scikit-learn: Powers the train/test split and the baseline classification model .
+-Scikit-learn: Powers the train/test split and the baseline classification model .
 
-Matplotlib & Seaborn: Generates EDA charts and model evaluation visuals like the Confusion Matrix.
+-Matplotlib & Seaborn: Generates EDA charts and model evaluation visuals like the Confusion Matrix.
 
-Joblib: Manages the saving and loading of trained model artifacts.  Tkinter: Provides the desktop interface for Stage 3 deployment.
+-Joblib: Manages the saving and loading of trained model artifacts.  Tkinter: Provides the desktop interface for Stage 3 deployment.
 
 📂 Folder StructureThe project follows a modular Object-Oriented design to ensure maintainability and clear separation of concerns :
 
@@ -37,12 +37,19 @@ macro_project/
 ├── outputs/              # Saved EDA charts and trained models (.joblib)
 
 ├── src/
+
 │   ├── models/           # Data classes (e.g., ImageRecord)
+
 │   ├── services/         # Logic for Indexing, EDA, Preprocessing, and Training
+
 │   ├── main.py           # Entry point for Stage 1 & 2 workflows
+
 │   ├── app.py            # Tkinter GUI application (Stage 3)
+
 │   └── console_app.py    # Menu-driven Console application (Stage 3)
+
 └── requirements.txt      # List of required dependencies
+
 🚀 How to Run
 
 1. Install Dependencies
