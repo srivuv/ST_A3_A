@@ -8,15 +8,15 @@ This application is designed to analyze macroinvertebrate image data, generate E
 🌟 Main Features
 
 - Dataset Indexing: Automatically scans directory structures to catalog image metadata, including labels, dimensions, and color channels.
-- 
+  
 - Class Distribution Analysis: Visualizes the number of images per category to identify potential data imbalances .
-- 
+  
 - Image Size Analysis: Calculates and plots the distribution of image widths and heights across the dataset .
-- 
+  
 - Baseline Classification: Trains a Random Forest (or SVM) model to recognize different species using a consistent preprocessing pipeline .
-- 
+  
 - Deployed Prediction Interface: Provides a user-friendly GUI (Tkinter) or a menu-driven Console application to predict species from new images .
-- 
+  
 🛠 Python Packages UsedThe system utilizes several specialized libraries for data science and computer vision :
 
 Pandas: Used to store indexed image records and support tabular analysis.
@@ -44,13 +44,19 @@ macro_project/
 🚀 How to Run
 
 1. Install Dependencies
+   
 Ensure you have Python installed, then run the following command to install required libraries:
 pip install pandas numpy opencv-python matplotlib seaborn scikit-learn Pillow joblib
+
 2. Prepare Data
+   
 Place your image dataset inside the data/raw/ directory. Each subfolder should be named after the species (e.g., data/raw/mayfly/image1.jpg).
+
 3. Execution
 Run Stage 1 & 2 (EDA & Training):
+
 python -m src.main
+
 Run Stage 3 (Deployment):
 
 For the Desktop GUI: python -m src.app   
@@ -58,6 +64,7 @@ For the Desktop GUI: python -m src.app
 For the Console Menu: python -m src.console_app
 
 🧪 Testing Evidence
+
 The application includes error handling and has been verified through manual testing scenarios :  
 
 Graceful handling of missing dataset folders or model files.
