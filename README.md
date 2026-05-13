@@ -62,15 +62,9 @@ pip install pandas numpy opencv-python matplotlib seaborn scikit-learn Pillow jo
 Place your image dataset inside the data/raw/ directory. Each subfolder should be named after the species (e.g., data/raw/mayfly/image1.jpg).
 
 3. Execution
-Run Stage 1 & 2 (EDA & Training):
+Run Model Training and GUI:
 
 python -m src.main
-
-Run Stage 3 (Deployment):
-
-For the Desktop GUI: python -m src.app   
-
-For the Console Menu: python -m src.console_app
 
 🧪 Testing Evidence
 
