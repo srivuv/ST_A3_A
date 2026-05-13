@@ -33,7 +33,9 @@ Joblib: Manages the saving and loading of trained model artifacts.  Tkinter: Pro
 
 macro_project/
 ├── data/raw/             # Raw images organized by class folders
+
 ├── outputs/              # Saved EDA charts and trained models (.joblib)
+
 ├── src/
 │   ├── models/           # Data classes (e.g., ImageRecord)
 │   ├── services/         # Logic for Indexing, EDA, Preprocessing, and Training
