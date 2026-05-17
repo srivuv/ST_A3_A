@@ -1,11 +1,11 @@
 
-Macroinvertebrate Image Analysis System 🔍🐜
+# Macroinvertebrate Image Analysis System
 
-Project Goal
+## Project Goal
 
 This application is designed to analyze macroinvertebrate image data, generate Exploratory Data Analysis (EDA) outputs, train a baseline machine learning classifier, and provide a deployed interface (Tkinter or Console) for image prediction. 
 
-🌟 Main Features
+## Main Features
 
 - Dataset Indexing: Automatically scans directory structures to catalog image metadata, including labels, dimensions, and color channels.
   
@@ -17,19 +17,23 @@ This application is designed to analyze macroinvertebrate image data, generate E
   
 - Deployed Prediction Interface: Provides a user-friendly GUI (Tkinter) or a menu-driven Console application to predict species from new images .
   
-🛠 Python Packages UsedThe system utilizes several specialized libraries for data science and computer vision :
+## Python Packages Used
 
--Pandas: Used to store indexed image records and support tabular analysis.
+The system utilizes several specialized libraries for data science and computer vision :
 
--OpenCV: Handles image reading, resizing, and grayscale preprocessing.
+- Pandas: Used to store indexed image records and support tabular analysis.
 
--Scikit-learn: Powers the train/test split and the baseline classification model .
+- OpenCV: Handles image reading, resizing, and grayscale preprocessing.
 
--Matplotlib & Seaborn: Generates EDA charts and model evaluation visuals like the Confusion Matrix.
+- Scikit-learn: Powers the train/test split and the baseline classification model .
 
--Joblib: Manages the saving and loading of trained model artifacts.  Tkinter: Provides the desktop interface for Stage 3 deployment.
+- Matplotlib & Seaborn: Generates EDA charts and model evaluation visuals like the Confusion Matrix.
 
-📂 Folder StructureThe project follows a modular Object-Oriented design to ensure maintainability and clear separation of concerns :
+- Joblib: Manages the saving and loading of trained model artifacts.  Tkinter: Provides the desktop interface for Stage 3 deployment.
+
+## Folder Structure
+
+The project follows a modular Object-Oriented design to ensure maintainability and clear separation of concerns :
 
 macro_project/
 ├── data/raw/             # Raw images organized by class folders
@@ -44,40 +48,38 @@ macro_project/
 
 │   ├── main.py           # Entry point for Stage 1 & 2 workflows
 
-│   ├── app.py            # Tkinter GUI application (Stage 3)
-
-│   └── console_app.py    # Menu-driven Console application (Stage 3)
+│   └── app.py            # Tkinter GUI application (Stage 3)
 
 └── requirements.txt      # List of required dependencies
 
-🚀 How to Run
+## How to Run
 
 1. Install Dependencies
    
 Ensure you have Python installed, then run the following command to install required libraries:
 pip install pandas numpy opencv-python matplotlib seaborn scikit-learn Pillow joblib
 
+The included requirements.txt file can also be used to install the necessary dependencies.
+
 2. Prepare Data
    
 Place your image dataset inside the data/raw/ directory. Each subfolder should be named after the species (e.g., data/raw/mayfly/image1.jpg).
 
 3. Execution
-Run Model Training and GUI:
+Run Model EDA, Training and GUI:
 
-python -m src.main
+python /path/to/parent/folder/src/main.py
 
-🧪 Testing Evidence
+## Testing Evidence
 
 The application includes error handling and has been verified through manual testing scenarios :  
 
-Graceful handling of missing dataset folders or model files.
+- Graceful handling of missing model files.
 
-Validation for invalid image paths or unsupported file types.
+## Authors
 
-Verification of end-to-end prediction flow with valid inputs.
-
-👤 Authors
-Tuan Nam Ngo
-
+- U3322254
+- U3283098
+- U3318286
 
 Team: Database Group 3
