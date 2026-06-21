@@ -11,5 +11,6 @@ def main() -> None:
     app = MacroApp(workflow.preprocessor, MODEL_OUTPUT_DIR/"macro_classifier.joblib")
     app.mainloop()
 
+
 if __name__ == "__main__":
     main()
